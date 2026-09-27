@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web đầu tiên của tôi</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: system-ui, sans-serif;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+    .card {
+      background: rgba(255,255,255,0.12);
+      padding: 48px 40px;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    }
+    h1 { font-size: 2.2rem; margin-bottom: 12px; }
+    p  { opacity: 0.9; margin-bottom: 24px; }
+    button {
+      padding: 12px 28px;
+      border: none;
+      border-radius: 30px;
+      background: #fff;
+      color: #764ba2;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    button:hover { transform: scale(1.06); }
+    #count { font-weight: 700; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>👋 Xin chào!</h1>
+    <p>Đây là web đầu tiên của tôi chạy trên GitHub Pages.</p>
+    <p>Bạn đã bấm <span id="count">0</span> lần.</p>
+    <button onclick="dem()">Bấm thử đi!</button>
+  </div>
+
+  <script>
+    let n = 0;
+    function dem() {
+      n++;
+      document.getElementById('count').textContent = n;
+    }
+  </script>
+</body>
+</html>
